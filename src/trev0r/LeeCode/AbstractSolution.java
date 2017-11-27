@@ -1,3 +1,4 @@
+package trev0r.LeeCode;
 public class AbstractSolution  {
     public static String description = "you need to override this method in each problem";
     public static String 中文描述 ="请在每个问题中给出中文描述";
@@ -6,7 +7,11 @@ public class AbstractSolution  {
     *分割符
     */
     public static String sc="\n\t";
+    public AbstractSolution(){
+    	QuestionDescribe();
+    }
     protected void QuestionDescribe()  {
+    	System.out.println(this.getClass().getName());
         Class clazz = this.getClass();
         String title = AbstractSolution.title;
         String description =  AbstractSolution.description;
